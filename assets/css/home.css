@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#page-heading {
+  text-align: center;
+  margin-top: 25px;
+  color: gray;
+  margin-left: 20px;
+}
+
+.contact-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-lists {
+  /* background-color: pink; */
+  /* background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  ); */
+  /* background-image: linear-gradient(135deg, #f0ff00 10%, #58cffb 100%); */
+  background-color: #5b84b1ff;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  width: 450px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.27s;
+  /* opacity: 0.8; */
+}
+
+.contact-lists:hover {
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+  /* opacity: 1; */
+  border-radius: 15px;
+}
+
+.contact-lists p {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #fc766aff;
+}
+
+.contact-list__details {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.delete-button {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-button a {
+  color: white;
+}
+
+.form-container {
+  width: inherit;
+}
+
+.input-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.input-data input {
+  padding: 4px;
+  margin-right: 30px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: gray;
+  border-radius: 6px;
+}
+
+.input-data .input1 {
+  margin-left: -3px;
+}
+
+.input-data .btn {
+  /* margin-left: 5px; */
+  margin-right: -50px;
+  border: 1px solid gray;
+  padding: 6px 10px;
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+  border-radius: 16px;
+  border-color: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: gray;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.btn:hover {
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+  color: #fc766aff;
+}

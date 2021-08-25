@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>
+      <%= title %>
+   </title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- Our css file should be below all other styles so that we can override it -->
+   <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+   <h1 id="page-heading">
+      <i class="fas fa-address-book"></i>
+      My Contacts List
+   </h1>
+
+   <div class="contact-list-container">
+      <ul>
+         <% for( let i of contacts ) { %>
+            <li class="contact-lists">
+               <div class="contact-list__details">
+                  <p class="contact-list__name">
+                     <%= i.name %>
+                  </p>
+                  <p class="contact-list__phone">
+                     <%= i.phone %>
+                  </p>
+               </div>
+               <!-- Delete Button -->
+               <div class="delete-button">
+                  <a href="/delete-contact/?id=<%= i._id %>">
+                     <i class="fas fa-window-close"></i>
+                  </a>
+               </div>
+            </li>
+            <% } %>
+      </ul>
+
+      <div class="form-container">
+         <form action="/create-contact" method="POST" class="input-data">
+            <input class="input1" type="text" name="name" placeholder=" Name" required>
+            <input class="input2" type="number" name="phone" placeholder=" Phone" required>
+
+            <button type="submit" class="btn">Add Contact</button>
+         </form>
+      </div>
+   </div>
+
+
+
+
+   <script type="text/js" src="/js/home.js"></script>
+</body>
+
+</html>
